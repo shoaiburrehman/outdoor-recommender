@@ -1,0 +1,16 @@
+requests
+selenium
+webdriver-manager
+beautifulsoup4
+pandas
+pillow
+torch
+transformers
+sentence-transformers
+faiss-cpu
+scikit-learn
+matplotlib
+streamlit
+wandb
+optuna
+jupyter
