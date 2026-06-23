@@ -1,0 +1,24 @@
+2026-06-15 15:43:14,433 INFO    MainThread:61629 [wandb_setup.py:_flush():81] Current SDK version is 0.27.2
+2026-06-15 15:43:14,433 INFO    MainThread:61629 [wandb_setup.py:_flush():81] Configure stats pid to 61629
+2026-06-15 15:43:14,433 INFO    MainThread:61629 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-15 15:43:14,433 INFO    MainThread:61629 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/wandb/offline-run-20260615_154314-8v5ffcl7/logs/debug.log
+2026-06-15 15:43:14,433 INFO    MainThread:61629 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/wandb/offline-run-20260615_154314-8v5ffcl7/logs/debug-internal.log
+2026-06-15 15:43:14,434 INFO    MainThread:61629 [wandb_init.py:init():766] calling init triggers
+2026-06-15 15:43:14,434 INFO    MainThread:61629 [wandb_init.py:init():771] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-06-15 15:43:14,434 INFO    MainThread:61629 [wandb_init.py:init():814] starting backend
+2026-06-15 15:43:15,651 INFO    MainThread:61629 [wandb_init.py:init():829] sending inform_init request
+2026-06-15 15:43:15,896 INFO    MainThread:61629 [wandb_init.py:init():834] backend started and connected
+2026-06-15 15:43:15,909 INFO    MainThread:61629 [wandb_init.py:init():904] updated telemetry
+2026-06-15 15:43:15,945 INFO    MainThread:61629 [wandb_init.py:init():927] communicating run to backend with 90.0 second timeout
+2026-06-15 15:43:15,949 INFO    MainThread:61629 [wandb_init.py:init():972] starting run threads in backend
+2026-06-15 15:43:16,062 INFO    MainThread:61629 [wandb_run.py:_console_start():2523] atexit reg
+2026-06-15 15:43:16,062 INFO    MainThread:61629 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-06-15 15:43:16,062 INFO    MainThread:61629 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-06-15 15:43:16,062 INFO    MainThread:61629 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-06-15 15:43:16,063 INFO    MainThread:61629 [wandb_init.py:init():1010] run started, returning control to user process
+2026-06-15 15:43:16,284 INFO    MainThread:61629 [wandb_run.py:_config_callback():1346] config_cb None None {'w_text': 0.012032199355798578, 'w_image': 0.9600445986050036, 'w_meta': 0.6885031349105366}
+2026-06-15 15:43:16,284 INFO    MainThread:61629 [wandb_run.py:_finish():2285] finishing run outdoor-recommender-tuning/8v5ffcl7
+2026-06-15 15:43:16,285 INFO    MainThread:61629 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-06-15 15:43:16,285 INFO    MainThread:61629 [wandb_run.py:_restore():2472] restore
+2026-06-15 15:43:16,285 INFO    MainThread:61629 [wandb_run.py:_restore():2478] restore done

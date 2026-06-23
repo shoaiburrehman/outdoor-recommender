@@ -14,3 +14,7 @@ streamlit
 wandb
 optuna
 jupyter
+cloudscraper
+fastapi
+uvicorn
+streamlit
