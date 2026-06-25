@@ -5,6 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from src.scraper import run_scraper
+# pyrefly: ignore [missing-import]
 from src.embeddings import EmbeddingPipeline
 from src.evaluate import optimize_hyperparameters
 

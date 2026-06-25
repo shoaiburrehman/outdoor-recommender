@@ -1,0 +1,15 @@
+⏳ Initializing Hybrid Recommender Engine Artifacts...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|████████████████████████████████████| 103/103 [00:00<00:00, 10174.83it/s]
+🎉 Hybrid Engine active! Balanced sorting logic online.
+[32m[I 2026-06-25 01:51:03,481][0m A new study created in memory with name: no-name-94b38baa-7872-46ad-9ddc-f1963fa32554[0m
+[32m[I 2026-06-25 01:51:03,564][0m Trial 0 finished with value: 0.011844761475028056 and parameters: {'w_text': 0.8053573792478413, 'w_rating': 0.0282495591224059, 'w_discount': 0.8060486348823787}. Best is trial 0 with value: 0.011844761475028056.[0m
+[32m[I 2026-06-25 01:51:03,636][0m Trial 1 finished with value: 0.012556230486227758 and parameters: {'w_text': 0.41189292864091465, 'w_rating': 0.6324898430676471, 'w_discount': 0.3338091571865972}. Best is trial 1 with value: 0.012556230486227758.[0m
+[32m[I 2026-06-25 01:51:03,710][0m Trial 2 finished with value: 0.011989529626559388 and parameters: {'w_text': 0.8141737788859621, 'w_rating': 0.18792478582511862, 'w_discount': 0.10699675527925823}. Best is trial 1 with value: 0.012556230486227758.[0m
+[32m[I 2026-06-25 01:51:03,784][0m Trial 3 finished with value: 0.012225993641182447 and parameters: {'w_text': 0.3060048053091843, 'w_rating': 0.6502481267975296, 'w_discount': 0.9547602568800727}. Best is trial 1 with value: 0.012556230486227758.[0m
+[32m[I 2026-06-25 01:51:03,857][0m Trial 4 finished with value: 0.01239022995803984 and parameters: {'w_text': 0.6423400343458648, 'w_rating': 0.7244647030528606, 'w_discount': 0.16075553233019613}. Best is trial 1 with value: 0.012556230486227758.[0m
+[32m[I 2026-06-25 01:51:03,927][0m Trial 5 finished with value: 0.012255702918787487 and parameters: {'w_text': 0.9964148701883175, 'w_rating': 0.5530528440704736, 'w_discount': 0.546844416742452}. Best is trial 1 with value: 0.012556230486227758.[0m
+[32m[I 2026-06-25 01:51:03,999][0m Trial 6 finished with value: 0.012810822810634335 and parameters: {'w_text': 0.12357632697197285, 'w_rating': 0.8593778627449349, 'w_discount': 0.973869000760544}. Best is trial 6 with value: 0.012810822810634335.[0m
+[32m[I 2026-06-25 01:51:04,070][0m Trial 7 finished with value: 0.013165725144006095 and parameters: {'w_text': 0.7073747607952144, 'w_rating': 0.871921549321071, 'w_discount': 0.684614489665403}. Best is trial 7 with value: 0.013165725144006095.[0m
+[32m[I 2026-06-25 01:51:04,142][0m Trial 8 finished with value: 0.012427300064545706 and parameters: {'w_text': 0.8596585090502592, 'w_rating': 0.7769573242865119, 'w_discount': 0.26812248329544475}. Best is trial 7 with value: 0.013165725144006095.[0m
+[32m[I 2026-06-25 01:51:04,216][0m Trial 9 finished with value: 0.012175112555951606 and parameters: {'w_text': 0.4183836529967815, 'w_rating': 0.6350477654591841, 'w_discount': 0.048303827964688906}. Best is trial 7 with value: 0.013165725144006095.[0m

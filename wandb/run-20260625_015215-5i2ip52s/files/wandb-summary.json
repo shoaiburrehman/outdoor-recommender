@@ -1,0 +1,1 @@
+{"best_precision_at_5":1,"_wandb":{"runtime":4},"weight_discount":0.7295860503744495,"_runtime":4,"weight_text":0.8662551801311498,"precision_at_5":0.98,"recall_at_5":0.012076622789549301,"weight_rating":0.37907549559158193,"_step":10,"trial_number":9,"_timestamp":1.782345140764042e+09,"corresponding_recall_at_5":0.012079305268729301}

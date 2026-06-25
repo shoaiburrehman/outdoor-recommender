@@ -1,0 +1,58 @@
+_wandb:
+    value:
+        cli_version: 0.27.2
+        e:
+            j8z4arnaewigpgn7tehdk0k9x38fwpuz:
+                apple:
+                    ecpuCores: 6
+                    gpuCores: 10
+                    macModel: Mac16,1
+                    memoryGb: 16
+                    name: Apple M4
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "16106127360"
+                cpu_count: 10
+                cpu_count_logical: 10
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "299585822720"
+                email: shoaiburrehman249@gmail.com
+                executable: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/bin/python3
+                git:
+                    commit: 26a3c374f65c036b34e02f0e7299d5903672b7c4
+                    remote: https://github.com/shoaiburrehman/outdoor-recommender.git
+                host: Mac.fritz.box
+                memory:
+                    total: "17179869184"
+                os: macOS-15.7.3-arm64-arm-64bit-Mach-O
+                program: -m src.evaluate
+                python: CPython 3.14.0
+                root: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender
+                startedAt: "2026-06-24T23:50:36.816114Z"
+                writerId: j8z4arnaewigpgn7tehdk0k9x38fwpuz
+        m: []
+        python_version: 3.14.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "2":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "4": 3.14.0
+            "5": 0.27.2
+            "6": 5.12.0
+            "12": 0.27.2
+            "13": darwin-arm64

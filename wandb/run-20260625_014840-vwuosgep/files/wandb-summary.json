@@ -1,0 +1,1 @@
+{"_timestamp":1.782344925037067e+09,"trial_number":9,"_step":10,"_wandb":{"runtime":4},"weight_rating":0.037007086700995506,"weight_discount":0.6487654635242615,"precision_at_5":0.976,"best_precision_at_5":1,"recall_at_5":0.012826342661034749,"_runtime":4,"weight_text":0.9407460465790052}

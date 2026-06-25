@@ -1,0 +1,45 @@
+⏳ Initializing Hybrid Recommender Engine Artifacts...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████| 103/103 [00:00<00:00, 9526.41it/s]
+🎉 Hybrid Engine active! Balanced sorting logic online.
+[32m[I 2026-06-25 01:48:07,998][0m A new study created in memory with name: no-name-e2252e57-7288-41c2-9c42-be863ae5ea14[0m
+[33m[W 2026-06-25 01:48:08,096][0m Trial 0 failed with parameters: {'w_text': 0.9817067055423375, 'w_rating': 0.7572036293019397, 'w_discount': 0.28496619178896165} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,096][0m Trial 0 failed with value (np.float64(0.992), np.float64(0.012292510593910854)).[0m
+[33m[W 2026-06-25 01:48:08,168][0m Trial 1 failed with parameters: {'w_text': 0.4219910936506661, 'w_rating': 0.20912263811623322, 'w_discount': 0.2869104477811344} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,168][0m Trial 1 failed with value (np.float64(0.992), np.float64(0.012923474183435743)).[0m
+[33m[W 2026-06-25 01:48:08,240][0m Trial 2 failed with parameters: {'w_text': 0.4579028916630986, 'w_rating': 0.7860520715805656, 'w_discount': 0.24524367316426965} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,240][0m Trial 2 failed with value (np.float64(0.988), np.float64(0.012506477644588447)).[0m
+[33m[W 2026-06-25 01:48:08,312][0m Trial 3 failed with parameters: {'w_text': 0.8722571634793281, 'w_rating': 0.5711185318669024, 'w_discount': 0.2695530193209845} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,312][0m Trial 3 failed with value (np.float64(0.9919999999999999), np.float64(0.0127770333384936)).[0m
+[33m[W 2026-06-25 01:48:08,384][0m Trial 4 failed with parameters: {'w_text': 0.6516121901278873, 'w_rating': 0.560560239574734, 'w_discount': 0.004853334096711626} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,384][0m Trial 4 failed with value (np.float64(1.0), np.float64(0.01234436227215697)).[0m
+[33m[W 2026-06-25 01:48:08,454][0m Trial 5 failed with parameters: {'w_text': 0.5523117474157206, 'w_rating': 0.5665401424421062, 'w_discount': 0.9340713653381894} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,454][0m Trial 5 failed with value (np.float64(0.9840000000000001), np.float64(0.013292707562326065)).[0m
+[33m[W 2026-06-25 01:48:08,525][0m Trial 6 failed with parameters: {'w_text': 0.2515120672767732, 'w_rating': 0.38545182947968337, 'w_discount': 0.745546583672312} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,526][0m Trial 6 failed with value (np.float64(0.996), np.float64(0.012020914845987168)).[0m
+[33m[W 2026-06-25 01:48:08,596][0m Trial 7 failed with parameters: {'w_text': 0.336814054253338, 'w_rating': 0.6051684828670356, 'w_discount': 0.8630193355806146} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,596][0m Trial 7 failed with value (np.float64(0.976), np.float64(0.012942545354192387)).[0m
+[33m[W 2026-06-25 01:48:08,666][0m Trial 8 failed with parameters: {'w_text': 0.6788517861591591, 'w_rating': 0.965539293258757, 'w_discount': 0.8166357524739674} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,666][0m Trial 8 failed with value (np.float64(0.976), np.float64(0.011445367431377371)).[0m
+[33m[W 2026-06-25 01:48:08,742][0m Trial 9 failed with parameters: {'w_text': 0.8046221989602308, 'w_rating': 0.14284719802889112, 'w_discount': 0.37974873148233923} because of the following error: The number of the values 2 did not match the number of the objectives 1.[0m
+[33m[W 2026-06-25 01:48:08,742][0m Trial 9 failed with value (np.float64(1.0), np.float64(0.012538202096213728)).[0m
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/src/evaluate.py", line 84, in <module>
+    optimize_hyperparameters()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/src/evaluate.py", line 76, in optimize_hyperparameters
+    wandb.config.update(study.best_params)
+                        ^^^^^^^^^^^^^^^^^
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/lib/python3.14/site-packages/optuna/study/study.py", line 120, in best_params
+    return self.best_trial.params
+           ^^^^^^^^^^^^^^^
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/lib/python3.14/site-packages/optuna/study/study.py", line 168, in best_trial
+    return self._get_best_trial(deepcopy=True)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/lib/python3.14/site-packages/optuna/study/study.py", line 334, in _get_best_trial
+    best_trial = self._storage.get_best_trial(self._study_id)
+  File "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/lib/python3.14/site-packages/optuna/storages/_in_memory.py", line 251, in get_best_trial
+    raise ValueError("No trials are completed yet.")
+ValueError: No trials are completed yet.

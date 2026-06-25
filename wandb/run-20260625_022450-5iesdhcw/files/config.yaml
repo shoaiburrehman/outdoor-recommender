@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.27.2
+        e:
+            5zh66gc0fccazj435g4j8lovh6plyb3s:
+                apple:
+                    ecpuCores: 6
+                    gpuCores: 10
+                    macModel: Mac16,1
+                    memoryGb: 16
+                    name: Apple M4
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "17179869184"
+                cpu_count: 10
+                cpu_count_logical: 10
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "299807354880"
+                email: shoaiburrehman249@gmail.com
+                executable: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/bin/python3
+                git:
+                    commit: 26a3c374f65c036b34e02f0e7299d5903672b7c4
+                    remote: https://github.com/shoaiburrehman/outdoor-recommender.git
+                host: Mac.fritz.box
+                memory:
+                    total: "17179869184"
+                os: macOS-15.7.3-arm64-arm-64bit-Mach-O
+                program: -m src.evaluate
+                python: CPython 3.14.0
+                root: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender
+                startedAt: "2026-06-25T00:24:50.235406Z"
+                writerId: 5zh66gc0fccazj435g4j8lovh6plyb3s
+        m: []
+        python_version: 3.14.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "2":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "3":
+                - 2
+            "4": 3.14.0
+            "5": 0.27.2
+            "6": 5.12.0
+            "12": 0.27.2
+            "13": darwin-arm64
+w_discount:
+    value: 0.02159705917674326
+w_rating:
+    value: 0.6572734503221566
+w_text:
+    value: 0.48796864703656295
