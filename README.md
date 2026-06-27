@@ -12,7 +12,7 @@ An end-to-end, hybrid-driven recommendation system and semantic search engine bu
 
 
 
-## 🏗️ System Architecture & RAG Pipeline Flow
+## 🏗️ System Architecture & Search Pipeline Flow
 
 
 
@@ -48,11 +48,11 @@ This system replaces archaic, rigid keyword search mechanics with a structured *
 
 
 
-* **Retrieval (The "R"):** Raw unstructured user text inputs are projected as coordinates into an offline-compiled 384-dimensional vector space, executing an angular vector scan across our data assets using **Cosine Similarity**.
+* **Retrieval Phase:** RRaw unstructured user text inputs are projected as coordinates into an offline-compiled 384-dimensional vector space, executing an angular vector scan across our data assets using **Cosine Similarity**.
 
-* **Augmentation (The "A"):** The system intercepts retrieved raw semantic rows and overlays metadata columns (`rating_score`, `discount_percentage`) using a dynamic vector scoring formula.
+* **Ranking & Augmentation Phase:** The system intercepts retrieved raw semantic rows and overlays metadata columns (`rating_score`, `discount_percentage`) using a dynamic vector scoring formula.
 
-* **Generation (The "G"):** The balanced payload is delivered to an operational dashboard, dynamically constructing formatted grid interfaces, review metrics, and active store referral routing targets on the fly.
+* **Interface Generation Phase:** The balanced payload is delivered to an operational dashboard, dynamically constructing formatted grid interfaces, review metrics, and active store referral routing targets on the fly.
 
 
 
