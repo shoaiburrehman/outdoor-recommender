@@ -28,19 +28,19 @@ This system replaces archaic, rigid keyword search mechanics with a structured *
 
           ▼
 
- 1. RETRIEVAL (R)  ──► Encode via all-MiniLM-L6-v2 ──► Matrix Scan (Cosine Similarity)
+ 1. RETRIEVAL  ──► Encode via all-MiniLM-L6-v2 ──► Matrix Scan (Cosine Similarity)
 
           │
 
           ▼
 
- 2. AUGMENTATION (A) ──► Blend Similarity with normalized Ratings & Price Discounts
+ 2. RANKING & AUGMENTATION ──► Blend Similarity with normalized Ratings & Price Discounts
 
           │
 
           ▼
 
- 3. GENERATION (G) ──► Streamlit Engine dynamically constructs UI Card Interfaces
+ 3. INTERFACE GENERATION ──► Streamlit Engine dynamically constructs UI Card Interfaces
 
 
 
