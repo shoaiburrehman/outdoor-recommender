@@ -1,0 +1,1 @@
+{"trial_number":49,"best_precision_at_5":0,"_step":50,"_runtime":6,"recall_at_5":0,"_timestamp":1.782455172880901e+09,"corresponding_recall_at_5":0,"_wandb":{"runtime":6},"precision_at_5":0,"weight_sim":0.10106133208018242,"weight_discount":0.4934489585535359,"weight_rating":0.5926936785193507}

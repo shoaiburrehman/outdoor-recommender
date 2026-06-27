@@ -1,0 +1,68 @@
+_wandb:
+    value:
+        cli_version: 0.27.2
+        e:
+            ghwa9gx2blutxrvaucbdr1tce6tkaqtr:
+                apple:
+                    ecpuCores: 6
+                    gpuCores: 10
+                    macModel: Mac16,1
+                    memoryGb: 16
+                    name: Apple M4
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "18253611008"
+                codePath: run_pipeline.py
+                codePathLocal: run_pipeline.py
+                cpu_count: 10
+                cpu_count_logical: 10
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "300387201024"
+                email: shoaiburrehman249@gmail.com
+                executable: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/bin/python
+                git:
+                    commit: fbc43e42dc7e3cde6105daa8e83a6b44de3fdc3a
+                    remote: https://github.com/shoaiburrehman/outdoor-recommender.git
+                host: Mac.fritz.box
+                memory:
+                    total: "17179869184"
+                os: macOS-15.7.3-arm64-arm-64bit-Mach-O
+                program: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/run_pipeline.py
+                python: CPython 3.14.0
+                root: /Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender
+                startedAt: "2026-06-26T06:21:31.293178Z"
+                writerId: ghwa9gx2blutxrvaucbdr1tce6tkaqtr
+        m: []
+        python_version: 3.14.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "2":
+                - 1
+                - 5
+                - 11
+                - 35
+                - 49
+                - 53
+                - 75
+            "3":
+                - 2
+            "4": 3.14.0
+            "5": 0.27.2
+            "6": 5.12.0
+            "12": 0.27.2
+            "13": darwin-arm64
+w_discount:
+    value: 0.13029805176424558
+w_rating:
+    value: 0.008063287173818573
+w_sim:
+    value: 0.9973857334799211

@@ -4,9 +4,11 @@ import os
 # Ensure local source directory parameters are append-bound cleanly to active runtime context
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
+# Import every file in the logical sequence
 from src.scraper import run_scraper
-# pyrefly: ignore [missing-import]
-from src.embeddings import EmbeddingPipeline
+from src.feature_engineering import generate_product_profiles
+from src.embedding_generator import EmbeddingPipeline
+from src.similarity_calculator import calculate_similarity_matrix  # ⚡ Added
 from src.evaluate import optimize_hyperparameters
 
 def main():
@@ -14,18 +16,25 @@ def main():
     print("      LAUNCHING END-TO-END OUTDOOR RECOMMENDER PIPELINE APP          ")
     print("=====================================================================\n")
 
-    # Step 1: Broad Scale Multi-Category Web Ingestion Execution
-    print("[STAGE 1/3] Launching Intelligent Broad Target Crawler Engine...")
-    # Using 3 pages per category for a rapid initial test drive of the asset pipeline
-    run_scraper(max_pages_per_category=3)
+    # STAGE 1: Data Gathering
+    print("[STAGE 1/5] Ingesting Web Data via Intelligent Crawler Engine...")
+    run_scraper(max_pages_per_category=6)
 
-    # Step 2: Computer Vision & Natural Language Context Embedding Production
-    print("\n[STAGE 2/3] Extracting Multimodal Vectors via CLIP & Scaling Structural Metadata...")
+    # STAGE 2: Data Processing & Feature Engineering
+    print("\n[STAGE 2/5] Cleaning Text Elements & Structuring Metadata...")
+    generate_product_profiles() 
+
+    # STAGE 3: Dense Vector Space Production
+    print("\n[STAGE 3/5] Computing High-Density Transformers Embeddings...")
     embedder = EmbeddingPipeline()
     embedder.generate_embeddings()
 
-    # Step 3: Algorithmic Calibration via Metric Evaluation Loops
-    print("\n[STAGE 3/3] Commencing Multi-Trial Optimization Sweep via Optuna Algorithms...")
+    # STAGE 4: Mathematical Comparison Mapping ⚡ THE CRITICAL SYNC LINK
+    print("\n[STAGE 4/5] Building Unified Global Cosine Similarity Matrix...")
+    calculate_similarity_matrix() 
+
+    # STAGE 5: Hyperparameter Optimization Sweep
+    print("\n[STAGE 5/5] Launching Optuna Parameter Loop & W&B Tracking...")
     best_weights = optimize_hyperparameters()
 
     print("\n=====================================================================")

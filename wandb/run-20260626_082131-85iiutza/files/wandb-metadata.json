@@ -1,0 +1,38 @@
+{
+  "os": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+  "python": "CPython 3.14.0",
+  "startedAt": "2026-06-26T06:21:31.293178Z",
+  "program": "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/run_pipeline.py",
+  "codePath": "run_pipeline.py",
+  "codePathLocal": "run_pipeline.py",
+  "git": {
+    "remote": "https://github.com/shoaiburrehman/outdoor-recommender.git",
+    "commit": "fbc43e42dc7e3cde6105daa8e83a6b44de3fdc3a"
+  },
+  "email": "shoaiburrehman249@gmail.com",
+  "root": "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender",
+  "host": "Mac.fritz.box",
+  "executable": "/Users/shoaiburrehmankhan/Desktop/BHT Learning/Semester 2/outdoor-recommender/env/bin/python",
+  "cpu_count": 10,
+  "cpu_count_logical": 10,
+  "disk": {
+    "/": {
+      "total": "494384795648",
+      "used": "300387201024"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "apple": {
+    "name": "Apple M4",
+    "ecpuCores": 6,
+    "pcpuCores": 4,
+    "gpuCores": 10,
+    "memoryGb": 16,
+    "swapTotalBytes": "18253611008",
+    "ramTotalBytes": "17179869184",
+    "macModel": "Mac16,1"
+  },
+  "writerId": "ghwa9gx2blutxrvaucbdr1tce6tkaqtr"
+}

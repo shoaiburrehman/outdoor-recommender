@@ -6,6 +6,8 @@ import optuna
 import wandb
 import random
 from src.recommender_engine import OutdoorRecommender
+import json
+import os
 
 class Evaluator:
     def __init__(self):
@@ -116,6 +118,12 @@ def optimize_hyperparameters():
     print(f"Corresponding Recall@5: {best_run_tracker['recall']:.4f}")
     print("="*50)
     
+# 💾 EXPLICIT ROOT FIX: Persist parameters locally for Streamlit to read!
+    os.makedirs("data", exist_ok=True)
+    with open("data/best_weights.json", "w") as f:
+        json.dump(study.best_params, f, indent=4)
+    print("🎉 Success! Optimal tuning parameters written directly to data/best_weights.json")
+
     evaluator.run_perturbation_analysis(study.best_params, k=5)
     return study.best_params
 

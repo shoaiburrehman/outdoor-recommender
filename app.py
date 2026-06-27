@@ -5,6 +5,8 @@ import pandas as pd
 import numpy as np
 from src.recommender_engine import OutdoorRecommender
 import re
+import os
+import json
 
 # Set up page configurations
 st.set_page_config(
@@ -24,6 +26,25 @@ except Exception as e:
     st.error(f"Failed to initialize the recommendation engine artifacts: {e}")
     st.stop()
 
+# =====================================================================
+# LOAD OPTIMIZED HYPERPARAMETERS FROM ML PIPELINE
+# =====================================================================
+
+# Define fallback standard defaults in case the json file isn't present
+default_weights = {
+    'w_sim': 0.95, 
+    'w_rating': 0.02, 
+    'w_discount': 0.03
+}
+
+# Dynamically load the absolute best weights calculated by Optuna & saved by evaluate.py
+if os.path.exists("data/best_weights.json"):
+    try:
+        with open("data/best_weights.json", "r") as f:
+            default_weights = json.load(f)
+    except Exception:
+        pass  # Gracefully fall back to defaults if JSON reading fails
+
 # Header Design Element
 st.title("🏔️ Smart Outdoor Gear Discovery Engine")
 st.markdown("---")
@@ -34,6 +55,37 @@ app_mode = st.sidebar.selectbox(
     ["🧠 Conceptual Semantic Search", "🏷️ Item-to-Item Recommendations"]
 )
 
+st.sidebar.markdown("---")
+st.sidebar.header("🎛️ Hybrid Tuning Parameters")
+# st.sidebar.markdown(
+#     "On the sidebar, we have our real-time hybrid tuning sliders. Instead of using hardcoded numbers, these sliders automatically fetch the most accurate weight combinations found by our backend Optuna optimization loop right when the app boots up. This keeps the interface clean while ensuring the system remains completely optimized"
+# )
+
+# Create sliders inside the sidebar initializing with your best pipeline weights
+w_sim = st.sidebar.slider(
+    "Text Similarity Weight (w_sim)", 
+    0.0, 1.0, 
+    float(default_weights.get('w_sim', 0.9167)), 
+    step=0.01
+)
+w_rating = st.sidebar.slider(
+    "User Rating Weight (w_rating)", 
+    0.0, 1.0, 
+    float(default_weights.get('w_rating', 0.0692)), 
+    step=0.01
+)
+w_discount = st.sidebar.slider(
+    "Discount Depth Weight (w_discount)", 
+    0.0, 1.0, 
+    float(default_weights.get('w_discount', 0.0354)), 
+    step=0.01
+)
+
+# Visual validation check to keep track of normalization for presentation transparency
+total_weight = w_sim + w_rating + w_discount
+st.sidebar.caption(f"Current Coefficient Vector Sum: **{total_weight:.3f}**")
+
+st.sidebar.markdown("---")
 st.sidebar.markdown("""
 ### How it works:
 This intelligent backend converts raw textual profiles into dense **384-dimensional vector coordinates** utilizing an `all-MiniLM-L6-v2` Transformer, scoring recommendations in real-time via angular **Cosine Similarity**.
@@ -68,7 +120,6 @@ def display_product_cards(dataframe):
                     clean_name = clean_name[len(brand_prefix):]
                 
                 # 2. Use word-boundary regex to wipe out unwanted terms anywhere in the string
-                # This matches the term cleanly even if it's right at the end of the line
                 unwanted_patterns = r'\b(St|He|Mix|30mbar|50mbar|L/S|S/S)\.?\b'
                 clean_name = re.sub(unwanted_patterns, '', clean_name, flags=re.IGNORECASE)
                 
@@ -82,14 +133,17 @@ def display_product_cards(dataframe):
                 st.markdown(f"**Category:** `{row['category'].upper()}`")
                 st.markdown(f"**Price:** <span style='color:#2e7d32; font-weight:bold;'>{row['price_clean']} EUR</span>", unsafe_allow_html=True)
                 
-                if row['rating_score'] > 0:
-                    stars = "⭐" * int(round(row['rating_score']))
-                    st.markdown(f"**Rating:** {stars} ({row['rating_score']} / 5)")
+                # Fixed column checks to match the keys safely
+                rating_val = row.get('rating_score', row.get('rating', 0.0))
+                if pd.notna(rating_val) and rating_val > 0:
+                    stars = "⭐" * int(round(rating_val))
+                    st.markdown(f"**Rating:** {stars} ({rating_val:.1f} / 5)")
                 else:
                     st.markdown("**Rating:** 🚫 No reviews yet")
                 
-                if row['discount_percentage'] > 0:
-                    st.markdown(f"**Deal:** <span style='color:#c62828; font-weight:bold;'>-{row['discount_percentage']}% Off</span>", unsafe_allow_html=True)
+                disc_val = row.get('discount_percentage', 0.0)
+                if pd.notna(disc_val) and disc_val > 0:
+                    st.markdown(f"**Deal:** <span style='color:#c62828; font-weight:bold;'>-{disc_val:.0f}% Off</span>", unsafe_allow_html=True)
                 else:
                     st.markdown("**Deal:** Regular Price")
                 
@@ -110,8 +164,14 @@ if app_mode == "🧠 Conceptual Semantic Search":
     
     if search_query:
         with st.spinner("Scanning dense vector universe and sorting ranking weights..."):
-            # CALL THE NEW HYBRID FUNCTION HERE ⚡
-            results = engine.hybrid_semantic_search(search_query, top_n=num_results)
+            # ⚡ PASSED SLIDER PARAMETERS DIRECTLY DOWN TO PIPELINE ENGINE EXECUTION
+            results = engine.hybrid_semantic_search(
+                search_query, 
+                top_n=num_results, 
+                w_sim=w_sim, 
+                w_rating=w_rating, 
+                w_discount=w_discount
+            )
             full_results = engine.df.loc[results.index]
             
             st.success(f"Discovered top match solutions for: '{search_query}'")
@@ -129,8 +189,14 @@ else:
     
     if selected_item:
         with st.spinner("Calculating hybrid affinity matrix scores..."):
-            # CALL THE NEW HYBRID FUNCTION HERE ⚡
-            recs = engine.get_hybrid_recommendations(selected_item, top_n=num_recs)
+            # ⚡ PASSED SLIDER PARAMETERS DIRECTLY DOWN TO PIPELINE ENGINE EXECUTION
+            recs = engine.get_hybrid_recommendations(
+                selected_item, 
+                top_n=num_recs, 
+                w_sim=w_sim, 
+                w_rating=w_rating, 
+                w_discount=w_discount
+            )
             full_recs = engine.df.loc[recs.index]
             
             st.subheader(f"Because you showed interest in: **{selected_item}**")
