@@ -1,9 +1,11 @@
 # 🏔️ Smart Outdoor Gear Discovery Engine
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://outdoor-recommender.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
+An end-to-end, hybrid-driven recommendation system and semantic search engine built for specialized outdoor equipment catalog spaces. The application encodes **2,222 unique product listings** scraped from *bergfreunde.de* into a high-density vector space, utilizing an integrated mathematical scoring framework to balance contextual alignment with performance and economic value metrics.
 
-A production-grade, hybrid-driven **Retrieval-Augmented Generation (RAG)** recommendation system and semantic search engine built for outdoor equipment catalog spaces. The application leverages deep text transformers to encode 2,222 unique product listings across 6 commercial pillars into a high-density vector space, utilizing an integrated mathematical scoring framework to balance contextual alignment with performance and value metrics.
-
+🔗 **Explore the interactive application here:** [Live Streamlit Production Deployment](https://outdoor-recommender.streamlit.app/)
 
 
 ---
